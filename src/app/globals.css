@@ -1,26 +1,30 @@
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@plugin "daisyui" {
+  themes: bumblebee --default, halloween;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@plugin "daisyui/theme" {
+  name: "bumblebee";
+  default: true;
+  color-scheme: light;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --color-primary: #ffa31a;
+  --color-primary-content: #111111;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-secondary: #111111;
+  --color-secondary-content: #ffffff;
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f5f6f8;
+  --color-base-300: #e5e7eb;
+  --color-base-content: #111111;
+
+  --color-neutral: #191919;
+  --color-neutral-content: #ffffff;
+
+  --radius-selector: 1rem;
+  --radius-field: 0.50rem;
+  --radius-box: 1rem;
 }
