@@ -6,8 +6,19 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Grafica from "./components/ui/graficaVentas";
 
 export default function Home() {
+  const data = [
+    { mes: "Ene", ventas: 4000 },
+    { mes: "Feb", ventas: 3000 },
+    { mes: "Mar", ventas: 2000 },
+    { mes: "Abr", ventas: 2780 },
+    { mes: "May", ventas: 1890 },
+    { mes: "Jun", ventas: 2390 },
+    { mes: "Jul", ventas: 3490 },
+  ];
+
   return (
     <div className="space-y-5">
       {/* Encabezado */}
@@ -82,15 +93,17 @@ export default function Home() {
         </div>
       </div>
       {/* Grafica de ventas del periodo */}
-      <div className="w-full rounded-md shadow-md h-48 flex flex-col gap-1">
+      <div className="w-full rounded-md shadow-md h-64 flex flex-col gap-1">
         <span className="text-lg font-bold">Ventas del periodo</span>
+        {/* Pendiente revisar tema del responsive */}
+        <Grafica/>
       </div>
 
       <div className="w-full flex flex-col gap-6">
         <div className="flex flex-row justify-between items-center">
           <span className="text-lg font-bold">Productos destacados</span>
           <Link href={"/jerseys"}>
-          <button className="btn btn-md btn-secondary">Ver todos</button>
+            <button className="btn btn-md btn-secondary">Ver todos</button>
           </Link>
         </div>
         {/* Contenedor cards */}
