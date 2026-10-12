@@ -4,6 +4,8 @@ import {
   CircleDollarSign,
   Shirt,
 } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -87,15 +89,21 @@ export default function Home() {
       <div className="w-full flex flex-col gap-6">
         <div className="flex flex-row justify-between items-center">
           <span className="text-lg font-bold">Productos destacados</span>
+          <Link href={"/jerseys"}>
           <button className="btn btn-md btn-secondary">Ver todos</button>
+          </Link>
         </div>
         {/* Contenedor cards */}
         <div className="flex flex-row gap-2">
-          <div className="card bg-base-100 w-1/3 shadow-sm">
+          <div className="card bg-base-100 w-1/3 shadow-sm border border-base-300 py-2">
             <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              <Image
+                src="/jersey.jpeg"
                 alt="Shoes"
+                width={84}
+                height={84}
+                loading="eager"
+                className="rounded-sm"
               />
             </figure>
             <div className="card-body p-2">
@@ -106,11 +114,15 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="card bg-base-100 w-1/3 shadow-sm">
+          <div className="card bg-base-100 w-1/3 shadow-sm border border-base-300 py-2">
             <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              <Image
+                src="/jersey.jpeg"
                 alt="Shoes"
+                width={84}
+                height={84}
+                loading="eager"
+                className="rounded-sm"
               />
             </figure>
             <div className="card-body p-2">
@@ -121,11 +133,15 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="card bg-base-100 w-1/3 shadow-sm">
+          <div className="card bg-base-100 w-1/3 shadow-sm border border-base-300 py-2">
             <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              <Image
+                src="/jersey.jpeg"
                 alt="Shoes"
+                width={84}
+                height={84}
+                loading="eager"
+                className="rounded-sm"
               />
             </figure>
             <div className="card-body p-2">
