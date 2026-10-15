@@ -10,14 +10,16 @@ export default function RegistroJersey() {
         </div>
         <span className="font-medium text-xl">Registro Jersey</span>
       </div>
-      <label className="flex aspect-square flex-col items-center gap-3 rounded-3xl bg-primary justify-center h-1/3">
+      <div className="flex flex-row w-full justify-center h-1/3">
+      <label className="flex aspect-square flex-col items-center gap-3 rounded-3xl border-2 border-primary justify-center   ">
         <input type="file" multiple accept="image/*" className="hidden" />
-        <div className="flex h-14 w-14 items-center justify-center rounded-full border-neutral">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-neutral">
           <Plus size={30} strokeWidth={2.5} />
         </div>
       </label>
+      </div>
       {/* Formulario */}
-      <div className="w-full flex flex-col gap-2">
+      <div className="w-full flex flex-col gap-4 text-lg">
         <fieldset className="w-full">
           <label className="label" htmlFor="nombre">
             {" "}
@@ -26,7 +28,7 @@ export default function RegistroJersey() {
           <input
             type="text"
             id="nombre"
-            className="input w-full focus:outline-none focus:ring-0"
+            className="input w-full text-lg focus:outline-none focus:ring-0"
             placeholder="Nombre"
           />
         </fieldset>
@@ -38,7 +40,7 @@ export default function RegistroJersey() {
           <input
             type="text"
             id="equipo"
-            className="input w-full focus:outline-none focus:ring-0"
+            className="input w-full text-lg focus:outline-none focus:ring-0"
             placeholder="Equipo"
           />
         </fieldset>
@@ -51,13 +53,13 @@ export default function RegistroJersey() {
             <input
               type="text"
               id="temporada"
-              className="input w-full focus:outline-none focus:ring-0"
+              className="input w-full text-lg focus:outline-none focus:ring-0"
               placeholder="Temporada"
             />
           </fieldset>
           <fieldset className="w-1/2">
             <label htmlFor="tipo">Tipo</label>
-            <select className="select" defaultValue="Local">
+            <select className="select text-lg" defaultValue="Local">
               <option disabled selected>
                 Temporada
               </option>
@@ -67,23 +69,23 @@ export default function RegistroJersey() {
           </fieldset>
         </div>
         <div className="flex flex-row gap-4">
-          <fieldset className="w-1/2">
+          <fieldset className="w-1/2 text-lg">
             <label className="label" htmlFor="costo">
-              costo
+              Costo
             </label>
             <div className="join items-stretch">
-              <span className="join-item border border-gray-300 bg-base-200 px-3 flex items-center">
+              <span className="join-item border text-lg border-gray-300 bg-base-200 px-3 flex items-center">
                 $
               </span>
               <input
                 type="number"
-                className="input input-bordered join-item focus:outline-none focus:ring-0"
+                className="input input-bordered text-lg join-item focus:outline-none focus:ring-0"
                 placeholder="costo"
                 min={0}
               />
             </div>
           </fieldset>
-          <fieldset className="w-1/2">
+          <fieldset className="w-1/2 text-lg">
             <label className="label" htmlFor="precio">
               Precio
             </label>
@@ -101,64 +103,69 @@ export default function RegistroJersey() {
           </fieldset>
         </div>
         <div className="flex flex-row gap-4">
-            <fieldset className="w-full flex flex-col">
-            <label className="label" htmlFor="precio">
+            <fieldset className="w-full text-lg flex flex-col">
+            <label className="label " htmlFor="precio">
               Stock por talla
             </label>
             <div className="grid grid-cols-3 gap-2">
             <div className="join items-stretch">
-              <span className="join-item border border-gray-300 bg-base-200 px-3 flex items-center">
+              <span className="join-item border text-lg border-gray-300 bg-base-200 px-3 flex items-center">
                 S
               </span>
               <input
                 type="number"
-                className="input input-bordered join-item focus:outline-none focus:ring-0"
-                placeholder="precio"
+                className="input input-bordered text-lg join-item focus:outline-none focus:ring-0"
+                placeholder="stock"
                 min={0}
+                defaultValue={0}
               />
             </div>
             <div className="join items-stretch">
-              <span className="join-item border border-gray-300 bg-base-200 px-3 flex items-center">
+              <span className="join-item border text-lg border-gray-300 bg-base-200 px-3 flex items-center">
                 M
               </span>
               <input
                 type="number"
-                className="input input-bordered join-item focus:outline-none focus:ring-0"
-                placeholder="precio"
+                className="input input-bordered text-lg join-item focus:outline-none focus:ring-0"
+                placeholder="stock"
                 min={0}
+                defaultValue={0}
               />
             </div>
             <div className="join items-stretch">
-              <span className="join-item border border-gray-300 bg-base-200 px-3 flex items-center">
+              <span className="join-item border text-lg border-gray-300 bg-base-200 px-3 flex items-center">
                 G
               </span>
               <input
                 type="number"
-                className="input input-bordered join-item focus:outline-none focus:ring-0"
-                placeholder="precio"
+                className="input input-bordered text-lg join-item focus:outline-none focus:ring-0"
+                placeholder="stock"
                 min={0}
+                defaultValue={0}
               />
             </div>
             <div className="join items-stretch">
-              <span className="join-item border border-gray-300 bg-base-200 px-3 flex items-center">
+              <span className="join-item border text-lg border-gray-300 bg-base-200 px-3 flex items-center">
                 XL
               </span>
               <input
                 type="number"
-                className="input input-bordered join-item focus:outline-none focus:ring-0"
-                placeholder="precio"
+                className="input input-bordered text-lg join-item focus:outline-none focus:ring-0"
+                placeholder="stock"
                 min={0}
+                defaultValue={0}
               />
             </div>
             <div className="join items-stretch">
-              <span className="join-item border border-gray-300 bg-base-200 px-3 flex items-center">
+              <span className="join-item border text-lg border-gray-300 bg-base-200 px-3 flex items-center">
                 2XL
               </span>
               <input
                 type="number"
-                className="input input-bordered join-item focus:outline-none focus:ring-0"
-                placeholder="precio"
+                className="input input-bordered text-lg join-item focus:outline-none focus:ring-0"
+                placeholder="stock"
                 min={0}
+                defaultValue={0}
               />
             </div>
             </div>

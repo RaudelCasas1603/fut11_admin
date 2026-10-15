@@ -32,11 +32,9 @@ export default function Home() {
           aria-label="Seleccionar periodo de tiempo"
           defaultValue="Mes"
         >
-          <option disabled selected>
-            Periodo
-          </option>
+          <option disabled>Periodo</option>
           <option>Semana</option>
-          <option>Mes</option>
+          <option>Mes</option> 
         </select>
       </div>
 
@@ -93,17 +91,16 @@ export default function Home() {
         </div>
       </div>
       {/* Grafica de ventas del periodo */}
-      <div className="w-full rounded-md shadow-md h-64 flex flex-col gap-1">
+      <div className="w-full rounded-md shadow-md h-64 flex flex-col gap-4">
         <span className="text-lg font-bold">Ventas del periodo</span>
-        {/* Pendiente revisar tema del responsive */}
-        <Grafica/>
+        <Grafica />
       </div>
 
       <div className="w-full flex flex-col gap-6">
         <div className="flex flex-row justify-between items-center">
           <span className="text-lg font-bold">Productos destacados</span>
           <Link href={"/jerseys"}>
-            <button className="btn btn-md btn-secondary">Ver todos</button>
+            <button className="btn btn-sm btn-secondary">Ver todos</button>
           </Link>
         </div>
         {/* Contenedor cards */}
