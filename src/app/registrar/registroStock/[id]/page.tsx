@@ -44,6 +44,15 @@ export default function detallesRegistroStock() {
         </label>
       </div>
 
+      {/* Contenedor de resumen de reingreso */}
+      <div className="bg-gray-100 rounded-md p-4">
+        <h4 className="font-bold text-xl">Resumen de la operación</h4>
+        <div className="flex flex-row justify-between w-full p-4 text-gray-500 ">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div className="flex flex-row justify-between w-full p-4 "></div>
       <button className="w-full btn btn-lg btn-primary absolute bottom-0 focus:outline-none focus:ring-0">
         <Plus />
         Agregar inventario
