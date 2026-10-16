@@ -77,58 +77,11 @@ export default function Resportes() {
       <div className="w-full rounded-md shadow-md h-56 flex flex-col gap-4 border border-base-300">
         <Grafica />
       </div>
-      {/* Contenedor de jerseys más vendido */}
+      {/* historial de las ventas */}
 
-      <ul className="list gap-2 h-[200px] overflow-y-auto">
-        <h3 className="font-bold text-base">Jerseys más vendidos</h3>
-        <li className="list-row border border-base-300 items-center">
-          <div className="rounded-full p-4 h-6 w-6 flex justify-center items-center bg-yellow-300">
-            1
-          </div>
-          <div className="flex flex-row gap-4">
-          <Image src={"/jersey.jpeg"} width={56} height={56} alt="Jersey" />
-          <div className="flex flex-col gap-0">
-            <span>Real Madrid Local</span>
-            <span>2026/27</span>
-          </div>
-          </div>
-          <div className="flex flex-col justify-center gap-0">
-            <span className="text-center font-bold">6</span>
-            <span>vendidos</span>
-          </div>
-        </li>
-        <li className="list-row border border-base-300 items-center">
-          <div className="rounded-full p-4 h-6 w-6 flex justify-center items-center bg-yellow-300"> 
-            
-            1
-          </div>
-          <div className="flex flex-row gap-4">
-          <Image src={"/jersey.jpeg"} width={56} height={56} alt="Jersey" />
-          <div className="flex flex-col gap-0">
-            <span>Real Madrid Local</span>
-            <span>2026/27</span>
-          </div>
-          </div>
-          <div className="flex flex-col justify-center gap-0">
-            <span className="text-center font-bold">6</span>
-            <span>vendidos</span>
-          </div>
-        </li>
-        <li className="list-row border border-base-300 items-center">
-          <div className="rounded-full p-4 h-6 w-6 flex justify-center items-center bg-yellow-300">
-            1
-          </div>
-          <div className="flex flex-row gap-4">
-          <Image src={"/jersey.jpeg"} width={56} height={56} alt="Jersey" />
-          <div className="flex flex-col gap-0">
-            <span>Real Madrid Local</span>
-            <span>2026/27</span>
-          </div>
-          </div> 
-          <div className="flex flex-col justify-center gap-0">
-            <span className="text-center font-bold">6</span>
-            <span>vendidos</span>
-          </div>
+      <ul className="list">
+        <li className="list-row">
+          {/* debe de contener fecha, cantidad de jerseys, y monto total, al presionarse debe de disparar un modal con el listado de jerseys y talla  */}
         </li>
       </ul>
     </div>
